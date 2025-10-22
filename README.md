@@ -30,7 +30,8 @@ This project was built primarily as a practice to strengthen **React fundamental
 
 ## Screenshots
 
-*(Add screenshots or GIFs here to visually show your app in action)*
+<img width="2829" height="1554" alt="image" src="https://github.com/user-attachments/assets/4dfd9857-cfc7-4de6-b3ce-bb01fef947f9" />
+
 
 ---
 
