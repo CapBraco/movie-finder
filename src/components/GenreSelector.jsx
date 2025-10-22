@@ -1,7 +1,8 @@
 const GenreSelector  = ({ categories, onSelect }) => {
     return(
     <>
-    <label>Select Gender: </label>
+    <div className='genders'>
+      <label>Select Gender: </label>
       <select 
       id='genres' 
       className="movie-list"
@@ -13,6 +14,7 @@ const GenreSelector  = ({ categories, onSelect }) => {
             </option>
         ))}
       </select>
+    </div>
     </>
     );
 }

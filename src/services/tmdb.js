@@ -58,3 +58,19 @@ export const getMovieInfo = async (movieId) => {
     };
 };
 
+export const getMovieTrailer = async (movieId) => {
+    const movieInfoEndPoint = `/movie/${movieId}/videos`;
+    const requestParams = `?api_key=${tmdbKey}`;
+    const urlToFetch = `${tmdbUrl}${movieInfoEndPoint}${requestParams}`;
+
+    try{
+        const response = await fetch(urlToFetch);
+        if(response.ok){
+            const jsonResponse = await response.json();
+            return jsonResponse;
+        }
+    }catch(error){
+        console.log(error)
+        return { results: [] };
+    };
+};

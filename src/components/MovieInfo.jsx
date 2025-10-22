@@ -1,11 +1,10 @@
-import React from "react";
+import React, { Children } from "react";
 
-const MovieInfo = ({ movieInfo, onClose }) => {
-  if (!movieInfo) return null; // Solo renderiza si hay película seleccionada
+const MovieInfo = ({ movieInfo, onClose, children }) => {
+  if (!movieInfo) return null;
 
   const posterBaseUrl = "https://image.tmdb.org/t/p/w200";
 
-  // Evita que click dentro del modal cierre el overlay
   const handleContainerClick = (e) => e.stopPropagation();
 
   return (
@@ -27,6 +26,9 @@ const MovieInfo = ({ movieInfo, onClose }) => {
         </div>
         <div className="movie-info-genres">
             <p>{movieInfo.genres?.map((g) => g.name).join(", ")}</p>
+        </div>
+        <div className="media-trailer">
+            {children}
         </div>
       </div>
     </div>
