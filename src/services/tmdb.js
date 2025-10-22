@@ -36,6 +36,12 @@ export const getMoviesByGender = async (genreId) => {
     }
 }
 
+export const getRandomMovie = (movies) => {
+    const index = Math.floor(Math.random()* movies.length);
+    const randomMovie = movies[index]
+    return randomMovie;
+}
+
 export const getMovieInfo = async (movieId) => {
     const movieInfoEndPoint = `/movie/${movieId}`;
     const requestParams = `?api_key=${tmdbKey}`;
